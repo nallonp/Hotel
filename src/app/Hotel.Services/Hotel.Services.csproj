@@ -9,4 +9,8 @@
     <ProjectReference Include="..\Hotel.Domain\Hotel.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interface\" />
+  </ItemGroup>
+
 </Project>

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hotel.Business.Interfaces
+namespace Hotel.Business.Interface
 {
     public interface IRoomBusiness
     {
