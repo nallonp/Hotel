@@ -43,7 +43,7 @@ namespace Hotel.Application
             rooms.AddRange(rooms2);
             foreach (var s in rooms)
             {
-                Console.WriteLine($"Type: {s.Type}");
+                Console.WriteLine($"Type: {s.Type} Guid: {s.Guid}");
             }
             //foreach (var item in query)
             //{

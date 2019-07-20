@@ -26,10 +26,10 @@ namespace Hotel.Business
         {
             return _repository.SelectByType(type);
         }
-
         public List<Room> GetVacantRooms()
         {
             return _repository.SelectVacantRooms();
         }
+        
     }
 }

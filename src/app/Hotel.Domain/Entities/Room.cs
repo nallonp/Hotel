@@ -1,9 +1,10 @@
-﻿using Hotel.Domain.Entities.ValueObj;
+﻿using Hotel.Domain.Base;
+using Hotel.Domain.Entities.ValueObj;
 using System;
 
 namespace Hotel.Domain.Entities
 {
-    public class Room
+    public class Room : Entity
     {
         public ERoomType Type { get; set; }
         public Boolean Occupied { get; set; }

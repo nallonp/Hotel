@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Hotel.Domain.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Hotel.Domain.Entities
 {
-    public class Client
+    public class Client : Entity
     {
         public String Nome { get; set; }
         public String Email { get; set; }
