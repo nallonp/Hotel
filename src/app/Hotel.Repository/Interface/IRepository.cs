@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hotel.Business.Interfaces
+namespace Repository.Interface
 {
-    public interface IBusiness<T>
+    public interface IRepository<T>
     {
-        bool Add(T t);
+        bool Insert(T t);
         List<T> GetList();
     }
 }

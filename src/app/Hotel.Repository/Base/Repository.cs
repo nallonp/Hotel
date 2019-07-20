@@ -18,7 +18,7 @@ namespace Repository.Base
                     if (_list == null)
                         _list = new List<T>();
         }
-        public bool Add(T t)
+        public bool Insert(T t)
         {
             _list.Add(t);
             return true;
