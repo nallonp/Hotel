@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hotel.Domain.Interface
+namespace Hotel.Domain.Interfaces
 {
     public interface IEntity
     {

@@ -6,7 +6,7 @@ namespace Hotel.Domain.Entities
 {
     public class Room : Entity
     {
-        public PricesPolicy Prices { get; set; }
+        public PricePolicy Prices { get; set; }
         public Boolean Occupied { get; set; }
         public Boolean Active { get; set; }
     }

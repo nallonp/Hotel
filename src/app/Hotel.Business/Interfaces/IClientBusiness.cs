@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hotel.Business.Interface
+namespace Hotel.Business.Interfaces
 {
     public interface IClientBusiness
     {

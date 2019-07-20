@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Hotel.Domain.Entities
 {
-    public class PricesPolicy : Entity
+    public class PricePolicy : Entity
     {
         public enum RoomType
         {
@@ -15,7 +15,7 @@ namespace Hotel.Domain.Entities
         }
         private double Price { get; set; }
         private RoomType Type { get; set; }
-        public PricesPolicy(double price, RoomType type)
+        public PricePolicy(double price, RoomType type)
         {
             Price = price;
             Type = type;
