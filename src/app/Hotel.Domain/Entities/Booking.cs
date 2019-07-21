@@ -11,5 +11,14 @@ namespace Hotel.Domain.Entities
         public DateTime CheckOutDate { get; set; }
         public Room Room { get; set; }
         public Client Client { get; set; }
+
+        public Booking(DateTime checkin, DateTime checkout, Room room, Client client)
+        {
+            CheckInDate = checkin;
+            CheckOutDate = checkout;
+            Room = room;
+            Client = client;
+        }
+
     }
 }

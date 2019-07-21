@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Repository
 {
-    public class BookingRepository : Repository<Booking>
+    public class BookingRepository : GenericRepository<Booking>
     {
 
     }

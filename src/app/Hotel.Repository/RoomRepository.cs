@@ -8,15 +8,20 @@ using System.Text;
 
 namespace Repository
 {
-    public class RoomRepository : Repository<Room>
+    public class RoomRepository : GenericRepository<Room>
     {
         public List<Room> SelectByType(ERoomType type)
         {
             return GetList().Where(room => room.Type == type).ToList();
         }
-        public List<Room> SelectVacantRooms()
+        public List<Room> SelectAvailableRooms()
         {
-            return GetList().Where(room => room.Occupied == false).ToList();
+            return GetList().Where(room => room.Empty == true && room.Active == true).ToList();
+        }
+        public Room SelectAvailableRoom()
+        {
+            return GetList().Where(room => room.Empty && room.Active).Min();
+            
         }
         public List<Room> SelectRoomsByType(ERoomType type)
         {
