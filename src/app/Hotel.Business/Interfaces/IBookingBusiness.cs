@@ -7,7 +7,7 @@ namespace Hotel.Business.Interfaces
 {
     public interface IBookingBusiness
     {
-        bool Add(Booking booking);
+        bool AddBooking(Booking booking);
         List<Booking> GetList();
     }
 }

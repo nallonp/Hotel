@@ -8,20 +8,19 @@ namespace Hotel.Business
 {
     public class BookingBusiness : IBookingBusiness
     {
-        private BookingRepository _booking;
+        private BookingRepository _repository;
         public BookingBusiness(BookingRepository bookingRepository)
         {
-            _booking = bookingRepository;
+            _repository = bookingRepository;
         }
-        public bool Add(Booking booking)
+        public bool AddBooking(Booking booking)
         {
-            _booking.Insert(booking);
+            _repository.Insert(booking);
             return true;
         }
-
         public List<Booking> GetList()
         {
-            return _booking.GetList();
+            return _repository.GetList();
         }
 
     }

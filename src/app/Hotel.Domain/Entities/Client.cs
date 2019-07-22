@@ -1,4 +1,4 @@
-﻿using Hotel.Domain.Base;
+﻿using Hotel.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;

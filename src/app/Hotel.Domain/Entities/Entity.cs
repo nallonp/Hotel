@@ -1,7 +1,7 @@
 ﻿using Hotel.Domain.Interfaces;
 using System;
 
-namespace Hotel.Domain.Base
+namespace Hotel.Domain.Entities
 {
     public abstract class Entity : IEntity, IComparable<IEntity>
     {

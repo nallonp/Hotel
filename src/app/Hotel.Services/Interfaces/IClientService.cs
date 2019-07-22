@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hotel.Services.Interfaces
 {
-    public interface IRoomService
+    public interface IClientService
     {
     }
 }

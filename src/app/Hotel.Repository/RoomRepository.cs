@@ -10,22 +10,25 @@ namespace Repository
 {
     public class RoomRepository : GenericRepository<Room>
     {
-        public List<Room> SelectByType(ERoomType type)
-        {
-            return GetList().Where(room => room.Type == type).ToList();
-        }
         public List<Room> SelectAvailableRooms()
         {
-            return GetList().Where(room => room.Empty == true && room.Active == true).ToList();
+            return GetList().Where(room => room.Empty == true && room.Locked == true).ToList();
         }
         public Room SelectAvailableRoom()
         {
-            return GetList().Where(room => room.Empty && room.Active).Min();
-            
+            return GetList().Where(room => room.Empty && room.Locked).FirstOrDefault();
         }
         public List<Room> SelectRoomsByType(ERoomType type)
         {
             return GetList().Where(room => room.Type == type).ToList();
+        }
+        public List<Room> SelectEmptyUnlockedRoomsByType(ERoomType type)
+        {
+            return GetList().Where(room => room.Empty == true && room.Locked == false && room.Type == type).ToList();
+        }
+        public List<Room> SelectLockedRoomsByType(ERoomType type)
+        {
+            return GetList().Where(room => room.Locked == true && room.Type == type).ToList();
         }
     }
 }

@@ -8,8 +8,10 @@ namespace Hotel.Business.Interfaces
 {
     public interface IRoomBusiness
     {
-        void Add(Room room, uint number);
-        List<Room> GetVacantRooms();
+        void AddRooms(Room room, uint number);
         List<Room> GetRoomsByType(ERoomType type);
+        void LockRoomsByType(ERoomType type, uint number);
+        void UnlockRoomsByType(ERoomType type, uint number);
+        List<Room> GetRooms();
     }
 }

@@ -6,9 +6,10 @@ namespace Repository.Interface
 {
     public interface IGenericRepository<T>
     {
-        bool Insert(T t);
-        bool Update(T t);
-        bool Delete(T t);
+        void Insert(T t);
+        void Update(T t);
+        void Delete(T t);
+        T SelectById(ulong id);
         List<T> GetList();
     }
 }
