@@ -10,6 +10,7 @@ namespace Hotel.Business.Interfaces
         void CancelBooking(uint id);
         void EmptyRooms(IList<Booking> bookings);
         IList<Booking> GetBookingsByClient(string cpf);
-        double CalcExpenses(Client client);
+        double CalcExpenses(IList<Booking> bookings);
+        IList<Booking> GetOneMonthRevenue();
     }
 }

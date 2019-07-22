@@ -5,7 +5,7 @@ namespace Hotel_Tahoe.Repository.Interfaces
 {
     public interface IBookingRepository
     {
-        IList<Booking> SelectOneMonthRevenue();
+       // IList<Booking> SelectOneMonthBookings();
         IList<Booking> SelectBookingsByClient(string cpf);
     }
 }

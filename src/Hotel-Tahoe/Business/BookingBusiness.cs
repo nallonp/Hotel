@@ -8,19 +8,30 @@ namespace Hotel.Business
 {
     public class BookingBusiness : IBookingBusiness
     {
-        private BookingRepository _repository;
+        private readonly BookingRepository _repository;
         public BookingBusiness(BookingRepository bookingRepository)
         {
             _repository = bookingRepository;
         }
         public void AddBooking(Booking booking)
-        {   
+        {
             _repository.Insert(booking);
         }
-        public double CalcExpenses(Client client)
+        public double CalcExpenses(IList<Booking> bookings)
         {
-            throw new NotImplementedException();
+            double bill = 0;
+            foreach (var booking in bookings)
+            {
+                double totalDays = booking.CheckOutDate.Subtract(booking.CheckInDate).TotalDays;
+                double bookingBill = booking.Room.Price * totalDays;
+                if (totalDays >= 5)
+                    bill += bookingBill * 0.95;
+                else
+                    bill += bookingBill;
+            }
+            return bill;
         }
+
         public void CancelBooking(uint id)
         {
             var booking = _repository.SelectById(id);
@@ -41,6 +52,10 @@ namespace Hotel.Business
         public IList<Booking> GetBookingsByClient(string cpf)
         {
             return _repository.SelectBookingsByClient(cpf);
+        }
+        public IList<Booking> GetOneMonthRevenue()
+        {
+            return _repository.SelectNextMonthRevenue();
         }
     }
 }

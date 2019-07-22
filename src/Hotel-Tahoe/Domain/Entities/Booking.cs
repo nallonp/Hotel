@@ -9,5 +9,6 @@ namespace Hotel.Domain.Entities
         public Room Room { get; set; }
         public Client Client { get; set; }
         public DateTime CheckInDate { get; set; }
+        public double value { get; set; }
     }
 }

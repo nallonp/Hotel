@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace HotelTahoe.App
+﻿namespace HotelTahoe.App
 {
     class Program
     {

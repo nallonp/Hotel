@@ -13,6 +13,6 @@ namespace Hotel.Services.Interfaces
         List<Room> GetRoomsByType(ERoomType type);
         void UnlockRoomsByType(ERoomType type, uint number);
         void LockRoomsByType(ERoomType type, uint number);
-        //StatisticsOfRooms GetStatisticsOfRooms(IList<Room> rooms);
+        StatisticsOfRooms GetStatisticsOfRooms(IList<Room> rooms);
     }
 }
